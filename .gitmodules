@@ -1,0 +1,3 @@
+[submodule "Helium/deps/spdlog"]
+	path = Helium/deps/spdlog
+	url = https://github.com/chapmankyle/spdlog
