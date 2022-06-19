@@ -12,8 +12,9 @@ public:
 
 };
 
-int main() {
-	Sandbox* sandbox = new Sandbox();
-	sandbox->run();
-	delete sandbox;
+/*
+ * @brief Creates the sandbox.
+ */
+Helium::Application* Helium::create() {
+	return new Sandbox();
 }

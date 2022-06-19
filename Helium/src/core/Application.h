@@ -13,5 +13,11 @@ namespace Helium {
 		void run();
 	};
 
+	/*
+	 * @brief Used to create the application.
+	 * Implementation should be defined in the client.
+	 */
+	Application* create();
+
 }
 

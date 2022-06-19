@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClInclude Include="src\core\Core.h" />
     <ClInclude Include="src\core\Application.h" />
+    <ClInclude Include="src\core\Main.h" />
     <ClInclude Include="src\Helium.h" />
   </ItemGroup>
   <ItemGroup>
