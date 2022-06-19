@@ -11,12 +11,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\core\Core.h" />
-    <ClInclude Include="src\core\Application.h" />
-    <ClInclude Include="src\core\Main.h" />
-    <ClInclude Include="src\Helium.h" />
+    <ClInclude Include="src\core\Base.hpp" />
+    <ClInclude Include="src\core\Logger.hpp" />
+    <ClInclude Include="src\core\Types.hpp" />
+    <ClInclude Include="src\core\Application.hpp" />
+    <ClInclude Include="src\core\Main.hpp" />
+    <ClInclude Include="src\Helium.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\Logger.cpp" />
     <ClCompile Include="src\core\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -66,9 +69,10 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>HM_PLATFORM_WINDOWS;HM_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HELIUM_PLATFORM_WINDOWS;HELIUM_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Helium\deps\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -81,9 +85,10 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>HM_PLATFORM_WINDOWS;HM_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HELIUM_PLATFORM_WINDOWS;HELIUM_BUILD_DLL;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Helium\deps\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

@@ -1,4 +1,4 @@
-#include <Helium.h>
+#include <Helium.hpp>
 
 class Sandbox : public Helium::Application {
 
@@ -15,6 +15,6 @@ public:
 /*
  * @brief Creates the sandbox.
  */
-Helium::Application* Helium::create() {
+Helium::Application* Helium::Create() {
 	return new Sandbox();
 }
