@@ -10,6 +10,7 @@
 // Only used by Helium applications
 
 #include "core/Application.hpp"
+#include "core/Logger.hpp"
 #include "core/Main.hpp"
 
 #endif // HELIUM_HPP

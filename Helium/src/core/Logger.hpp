@@ -17,18 +17,6 @@
 
 namespace Helium {
 
-	namespace log {
-
-		/* @brief Type of log to produce. */
-		enum class State {
-			Info = 0,
-			Warn,
-			Error,
-			Fatal
-		};
-
-	} // namespace log
-
 	/* @brief Allows logging of messages. */
 	class HELIUM_API Logger {
 
@@ -54,5 +42,46 @@ namespace Helium {
 	};
 
 } // namespace Helium
+
+/* Debug messages are ON */
+#ifndef HELIUM_DISABLE_DEBUG
+
+/* -- Core engine macros -- */
+
+#define HELIUM_CORE_TRACE(...)   ::Helium::Logger::GetEngineLogger()->trace(__VA_ARGS__)
+#define HELIUM_CORE_INFO(...)    ::Helium::Logger::GetEngineLogger()->info(__VA_ARGS__)
+#define HELIUM_CORE_WARN(...)    ::Helium::Logger::GetEngineLogger()->warn(__VA_ARGS__)
+#define HELIUM_CORE_ERROR(...)   ::Helium::Logger::GetEngineLogger()->error(__VA_ARGS__)
+#define HELIUM_CORE_FATAL(...)   ::Helium::Logger::GetEngineLogger()->critical(__VA_ARGS__)
+
+/* -- Client macros -- */
+
+#define HELIUM_TRACE(...)   ::Helium::Logger::GetClientLogger()->trace(__VA_ARGS__)
+#define HELIUM_INFO(...)    ::Helium::Logger::GetClientLogger()->info(__VA_ARGS__)
+#define HELIUM_WARN(...)    ::Helium::Logger::GetClientLogger()->warn(__VA_ARGS__)
+#define HELIUM_ERROR(...)   ::Helium::Logger::GetClientLogger()->error(__VA_ARGS__)
+#define HELIUM_FATAL(...)   ::Helium::Logger::GetClientLogger()->critical(__VA_ARGS__)
+
+/* Debug messages are OFF */
+#else
+
+/* -- Core engine macros -- */
+
+#define HELIUM_CORE_TRACE(...)
+#define HELIUM_CORE_INFO(...)
+#define HELIUM_CORE_WARN(...)
+#define HELIUM_CORE_ERROR(...)
+#define HELIUM_CORE_FATAL(...) ::Helium::Logger::GetEngineLogger()->critical(__VA_ARGS__)
+
+/* -- Client macros -- */
+
+#define HELIUM_TRACE(...)
+#define HELIUM_INFO(...)
+#define HELIUM_WARN(...)
+#define HELIUM_ERROR(...)
+#define HELIUM_FATAL(...) ::Helium::Logger::GetClientLogger()->critical(__VA_ARGS__)
+
+#endif
+
 
 #endif // CORE_LOGGER_HPP
