@@ -1,4 +1,4 @@
-// file      : Helium/core/Application.cpp
+// file      : Helium/src/core/Application.cpp
 // copyright : Copyright (c) 2022-present, Kyle Chapman
 // license   : GPL-3.0; see accompanying LICENSE file
 
