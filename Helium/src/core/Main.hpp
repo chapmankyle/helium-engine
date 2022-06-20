@@ -4,8 +4,8 @@
 
 #pragma once
 
-#ifndef CORE_MAIN_HPP
-#define CORE_MAIN_HPP
+#ifndef Z_CORE_MAIN_HPP
+#define Z_CORE_MAIN_HPP
 
 #ifdef HELIUM_PLATFORM_WINDOWS
 
@@ -28,4 +28,4 @@ int main(int argc, char** argv) {
 
 #endif // HELIUM_PLATFORM_WINDOWS
 
-#endif // CORE_MAIN_HPP
+#endif // Z_CORE_MAIN_HPP

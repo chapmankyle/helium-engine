@@ -4,8 +4,8 @@
 
 #pragma once
 
-#ifndef CORE_APPLICATION_HPP
-#define CORE_APPLICATION_HPP
+#ifndef Z_CORE_APPLICATION_HPP
+#define Z_CORE_APPLICATION_HPP
 
 #include "Base.hpp"
 
@@ -28,4 +28,4 @@ namespace Helium {
 
 } // namespace Helium
 
-#endif // CORE_APPLICATION_HPP
+#endif // Z_CORE_APPLICATION_HPP

@@ -4,17 +4,21 @@
 
 #pragma once
 
-#ifndef CORE_BASE_HPP
-#define CORE_BASE_HPP
+#ifndef Z_CORE_BASE_HPP
+#define Z_CORE_BASE_HPP
 
 #ifdef HELIUM_PLATFORM_WINDOWS
+
 	#ifdef HELIUM_BUILD_DLL
 		#define HELIUM_API __declspec(dllexport)
 	#else
 		#define HELIUM_API __declspec(dllimport)
-	#endif
+	#endif // HELIUM_BUILD_DLL
+
 #else
-	#error Helium is only available for Windows devices.
+
+	#error Helium is only available on Windows.
+
 #endif // HELIUM_PLATFORM_WINDOWS
 
-#endif // CORE_BASE_HPP
+#endif // Z_CORE_BASE_HPP

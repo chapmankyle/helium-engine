@@ -4,8 +4,8 @@
 
 #pragma once
 
-#ifndef CORE_TYPES_HPP
-#define CORE_TYPES_HPP
+#ifndef Z_CORE_TYPES_HPP
+#define Z_CORE_TYPES_HPP
 
 #include <memory>
 
@@ -17,4 +17,4 @@ namespace Helium {
 
 } // namespace Helium
 
-#endif // CORE_TYPES_HPP
+#endif // Z_CORE_TYPES_HPP

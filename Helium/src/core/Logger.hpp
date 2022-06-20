@@ -4,8 +4,8 @@
 
 #pragma once
 
-#ifndef CORE_LOGGER_HPP
-#define CORE_LOGGER_HPP
+#ifndef Z_CORE_LOGGER_HPP
+#define Z_CORE_LOGGER_HPP
 
 // Ignore warnings from inside spdlog itself
 #pragma warning(push, 0)
@@ -81,7 +81,6 @@ namespace Helium {
 #define HELIUM_ERROR(...)
 #define HELIUM_FATAL(...) ::Helium::Logger::GetClientLogger()->critical(__VA_ARGS__)
 
-#endif
+#endif // HELIUM_DISABLE_DEBUG
 
-
-#endif // CORE_LOGGER_HPP
+#endif // Z_CORE_LOGGER_HPP

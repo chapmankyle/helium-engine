@@ -4,8 +4,8 @@
 
 #pragma once
 
-#ifndef HELIUM_HPP
-#define HELIUM_HPP
+#ifndef Z_HELIUM_HPP
+#define Z_HELIUM_HPP
 
 // Only used by Helium applications
 
@@ -13,4 +13,4 @@
 #include "core/Logger.hpp"
 #include "core/Main.hpp"
 
-#endif // HELIUM_HPP
+#endif // Z_HELIUM_HPP
